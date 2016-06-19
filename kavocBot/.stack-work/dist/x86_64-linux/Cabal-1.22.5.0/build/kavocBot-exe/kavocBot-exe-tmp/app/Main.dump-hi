@@ -1,0 +1,317 @@
+
+==================== FINAL INTERFACE ====================
+2016-06-18 00:45:21.522586 UTC
+
+interface main@main:Main 7103
+  interface hash: 455f96fbe13f3bf0cc6c8c8683a99e2b
+  ABI hash: d50e7a86ec7e0e35d42ec5f0052fb71f
+  export-list hash: f4d5f4302ca88309810c2fe22793d063
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: 3ee268431c42dd88f4547d9265ae3c40
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  Main.chan
+  Main.listen
+  Main.main
+  Main.nick
+  Main.port
+  Main.server
+  Main.write
+module dependencies:
+package dependencies: base-4.8.2.0 ghc-prim-0.4.0.0
+                      integer-gmp-1.0.0.0 network-2.6.2.1@netwo_A6pE0dLgMEk2GtUa1JtTJQ
+orphans: base-4.8.2.0:GHC.Base base-4.8.2.0:GHC.Float
+         network-2.6.2.1@netwo_A6pE0dLgMEk2GtUa1JtTJQ:Network.Socket
+         network-2.6.2.1@netwo_A6pE0dLgMEk2GtUa1JtTJQ:Network.Socket.Types
+family instance modules: base-4.8.2.0:Control.Applicative
+                         base-4.8.2.0:Data.Either base-4.8.2.0:Data.Monoid
+                         base-4.8.2.0:Data.Type.Equality base-4.8.2.0:GHC.Generics
+import  -/  base-4.8.2.0:GHC.Base 1db77db5dae73d8c424c85b09fbadb89
+import  -/  base-4.8.2.0:GHC.IO.Handle 631f32e0ad65df940f6a2b3e721d8452
+import  -/  base-4.8.2.0:GHC.IO.Handle.Text 06d2dc7704bcfe88a2157fd04748ace5
+import  -/  base-4.8.2.0:GHC.IO.Handle.Types fe7c781ed6b3f00c4b1f0266e32a6e61
+import  -/  base-4.8.2.0:GHC.Real 1281efa9baf803bc7859d7efb89a38b3
+import  -/  base-4.8.2.0:Prelude 694dcaf039efe62df1c44834e2dbd2fb
+import  -/  base-4.8.2.0:System.IO 0248c1e850b7ea124cf7a2e1669ebf67
+import  -/  base-4.8.2.0:Text.Printf 0276d4e7547f991f04a90f6b1e7f1f46
+import  -/  ghc-prim-0.4.0.0:GHC.Types 6b27fb3fdbd0e3f0925a4496c66513bb
+import  -/  network-2.6.2.1@netwo_A6pE0dLgMEk2GtUa1JtTJQ:Network d25c46ceea5e9d1702f96f77c5fca775
+b873187dc66ea04c31350f6ad9e9846f
+  $s$fPrintfArg[]1 :: [GHC.Types.Char] -> Text.Printf.ModifierParser
+  {- Arity: 2, Strictness: <L,A><S,1*U>m,
+     Unfolding: InlineRule (2, True, False)
+                (\ ds1 :: [GHC.Types.Char] ds2 :: [GHC.Types.Char] ->
+                 case ds2 of wild {
+                   [] -> Text.Printf.errorShortFormat @ Text.Printf.FormatParse
+                   : c1 cs
+                   -> Text.Printf.FormatParse
+                        (GHC.Types.[] @ GHC.Types.Char)
+                        c1
+                        cs }) -}
+f89187faf4fb9c59c2d531a8fa6087c5
+  $shPrintf3 ::
+    GHC.IO.Handle.Types.Handle
+    -> GHC.Base.String
+    -> [Text.Printf.UPrintf]
+    -> [GHC.Types.Char]
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 5, Strictness: <S,U><L,1*U><L,U><L,U><L,U>,
+     Unfolding: (\ hdl :: GHC.IO.Handle.Types.Handle
+                   fmts :: GHC.Base.String
+                   args :: [Text.Printf.UPrintf]
+                   a2 :: [GHC.Types.Char]
+                   eta :: GHC.Prim.State# GHC.Prim.RealWorld[OneShot] ->
+                 GHC.IO.Handle.Text.hPutStr2
+                   hdl
+                   (Text.Printf.uprintfs
+                      fmts
+                      (GHC.List.reverse1
+                         @ Text.Printf.UPrintf
+                         (GHC.Types.:
+                            @ Text.Printf.UPrintf
+                            (Main.$s$fPrintfArg[]1 a2,
+                             \ w2 :: Text.Printf.FieldFormat ->
+                             case w2 of ww { Text.Printf.FieldFormat ww1 ww2 ww3 ww4 ww5 ww6 ww7 ->
+                             case ww7 of ww8 { GHC.Types.C# ww9 ->
+                             Text.Printf.$wformatString
+                               @ GHC.Types.Char
+                               Text.Printf.$fIsCharChar
+                               a2
+                               ww1
+                               ww2
+                               ww3
+                               ww9 } })
+                            args)
+                         (GHC.Types.[] @ Text.Printf.UPrintf))
+                      (GHC.Types.[] @ GHC.Types.Char))
+                   GHC.Types.False
+                   eta) -}
+69cded3e6aa60e1f634bb5a43cf74bb3
+  $sprintf3 :: () ~ ()
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Eq# @ * @ () @ () @~ <()>_N) -}
+f2b835b80c2a75476c610f9fef4991ec
+  chan :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "#tutbot-testing"#) -}
+3a21d320ae30af8a92381fe09d38a1e1
+  listen :: GHC.IO.Handle.Types.Handle -> GHC.Types.IO ()
+  {- Arity: 2, Strictness: <S,U><L,U>,
+     Unfolding: InlineRule (0, True, True)
+                Main.listen1
+                  `cast`
+                (<GHC.IO.Handle.Types.Handle>_R
+                 ->_R Sym (GHC.Types.NTCo:IO[0] <()>_R)) -}
+d7526f47363a58da97844f524b4e424f
+  listen1 ::
+    GHC.IO.Handle.Types.Handle
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 2, Strictness: <S,U><L,U>,
+     Unfolding: (\ h :: GHC.IO.Handle.Types.Handle
+                   eta :: GHC.Prim.State# GHC.Prim.RealWorld[OneShot] ->
+                 Main.listen2
+                   (\ s :: GHC.Prim.State# GHC.Prim.RealWorld[OneShot] ->
+                    case GHC.IO.Handle.Internals.wantReadableHandle_1
+                           @ GHC.Base.String
+                           GHC.IO.Handle.Text.hGetLine4
+                           h
+                           GHC.IO.Handle.Text.hGetLine2
+                             `cast`
+                           (<GHC.IO.Handle.Types.Handle__>_R
+                            ->_R Sym (GHC.Types.NTCo:IO[0] <GHC.Base.String>_R))
+                           s of ds1 { (#,#) ipv ipv1 ->
+                    GHC.IO.Handle.Text.hPutStr2
+                      GHC.IO.Handle.FD.stdout
+                      ipv1
+                      GHC.Types.True
+                      ipv })
+                     `cast`
+                   (Sym (GHC.Types.NTCo:IO[0] <()>_R))
+                   eta) -}
+6813b0ac156110d6a2481aee00a4fd6e
+  listen2 ::
+    GHC.Types.IO ()
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 2, HasNoCafRefs, Strictness: <C(S),C(U(U,A))><L,U> -}
+e6a0e31fb0def77adad3281c9efd8339
+  main :: GHC.Types.IO ()
+  {- Arity: 1, Strictness: <L,U>,
+     Unfolding: InlineRule (0, True, True)
+                Main.main1 `cast` (Sym (GHC.Types.NTCo:IO[0] <()>_R)) -}
+cb185babcae0ba0aafc7f2d828550524
+  main1 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 1, Strictness: <L,U>,
+     Unfolding: (\ s :: GHC.Prim.State# GHC.Prim.RealWorld[OneShot] ->
+                 case Network.connectTo1
+                        Main.server
+                        Main.main10
+                        s of ds1 { (#,#) ipv ipv1 ->
+                 case GHC.IO.Handle.hSetBuffering1
+                        ipv1
+                        GHC.IO.Handle.Types.NoBuffering
+                        ipv of ds2 { (#,#) ipv2 ipv3 ->
+                 case Main.main7
+                        ipv1
+                        Main.main6
+                        Main.nick
+                        ipv2 of ds3 { (#,#) ipv4 ipv5 ->
+                 case Main.main7
+                        ipv1
+                        Main.main5
+                        Main.main3
+                        ipv4 of ds4 { (#,#) ipv6 ipv7 ->
+                 case Main.main7
+                        ipv1
+                        Main.main2
+                        Main.chan
+                        ipv6 of ds5 { (#,#) ipv8 ipv9 ->
+                 Main.listen1 ipv1 ipv8 } } } } }) -}
+31e18200d7e472931bd08ff5f6e0a8cd
+  main10 :: Network.PortID
+  {- Unfolding: (Network.PortNumber Main.main11) -}
+24d8edc797add32db4873e98db18b88f
+  main11 :: Network.Socket.Types.PortNumber
+  {- Unfolding: (case {__pkg_ccall network-2.6.2.1@netwo_A6pE0dLgMEk2GtUa1JtTJQ htons GHC.Prim.Word#
+                                                                                      -> GHC.Prim.State#
+                                                                                           GHC.Prim.RealWorld
+                                                                                      -> (# GHC.Prim.State#
+                                                                                              GHC.Prim.RealWorld,
+                                                                                            GHC.Prim.Word# #)}
+                        __word 6667
+                        GHC.Prim.realWorld# of wild1 { (#,#) ds ds1 ->
+                 (GHC.Word.W16# (GHC.Prim.narrow16Word# ds1))
+                   `cast`
+                 (Sym (Network.Socket.Types.NTCo:PortNumber[0])) }) -}
+c96c8bf58e76cbe5f505e044e57c2de7
+  main12 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 1,
+     Unfolding: (GHC.TopHandler.runMainIO1
+                   @ ()
+                   Main.main1 `cast` (Sym (GHC.Types.NTCo:IO[0] <()>_R))) -}
+a0e2929438631544c7bffa0fa4e95edf
+  main2 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "JOIN"#) -}
+98a1fbd136cfb4b9ec9db12fce59ee46
+  main3 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.Base.++
+                   @ GHC.Types.Char
+                   Main.nick
+                   Main.main4) -}
+f8684ef4b880c50be0b4449f3f1dfb92
+  main4 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# " 0 * :tutorial bot"#) -}
+d2313792aef3e805452a8611a26d2a9a
+  main5 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "USER"#) -}
+f05aca3c5222c3ddc5a51990b7a4736d
+  main6 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "NICK"#) -}
+a6be5d235766aa33b29628fcccdbc0d0
+  main7 ::
+    GHC.IO.Handle.Types.Handle
+    -> GHC.Base.String
+    -> GHC.Base.String
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 4, Strictness: <S,U><L,U><L,U><L,U>,
+     Unfolding: (\ h :: GHC.IO.Handle.Types.Handle
+                   s :: GHC.Base.String
+                   t :: GHC.Base.String
+                   s1 :: GHC.Prim.State# GHC.Prim.RealWorld[OneShot] ->
+                 case Main.$shPrintf3
+                        h
+                        Main.main9
+                        (GHC.Types.:
+                           @ Text.Printf.UPrintf
+                           (Main.$s$fPrintfArg[]1 s,
+                            \ w2 :: Text.Printf.FieldFormat ->
+                            case w2 of ww { Text.Printf.FieldFormat ww1 ww2 ww3 ww4 ww5 ww6 ww7 ->
+                            case ww7 of ww8 { GHC.Types.C# ww9 ->
+                            Text.Printf.$wformatString
+                              @ GHC.Types.Char
+                              Text.Printf.$fIsCharChar
+                              s
+                              ww1
+                              ww2
+                              ww3
+                              ww9 } })
+                           (GHC.Types.[] @ Text.Printf.UPrintf))
+                        t
+                        s1 of ds1 { (#,#) ipv ipv1 ->
+                 Text.Printf.$wa
+                   @ ()
+                   Main.$sprintf3
+                   Main.main8
+                   (GHC.Types.:
+                      @ Text.Printf.UPrintf
+                      (Main.$s$fPrintfArg[]1 t,
+                       \ w2 :: Text.Printf.FieldFormat ->
+                       case w2 of ww { Text.Printf.FieldFormat ww1 ww2 ww3 ww4 ww5 ww6 ww7 ->
+                       case ww7 of ww8 { GHC.Types.C# ww9 ->
+                       Text.Printf.$wformatString
+                         @ GHC.Types.Char
+                         Text.Printf.$fIsCharChar
+                         t
+                         ww1
+                         ww2
+                         ww3
+                         ww9 } })
+                      (GHC.Types.:
+                         @ Text.Printf.UPrintf
+                         (Main.$s$fPrintfArg[]1 s,
+                          \ w2 :: Text.Printf.FieldFormat ->
+                          case w2 of ww { Text.Printf.FieldFormat ww1 ww2 ww3 ww4 ww5 ww6 ww7 ->
+                          case ww7 of ww8 { GHC.Types.C# ww9 ->
+                          Text.Printf.$wformatString
+                            @ GHC.Types.Char
+                            Text.Printf.$fIsCharChar
+                            s
+                            ww1
+                            ww2
+                            ww3
+                            ww9 } })
+                         (GHC.Types.[] @ Text.Printf.UPrintf)))
+                   ipv }) -}
+ed1b1aab571c2f92a83eba58dce1020e
+  main8 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "> %s %s\n"#) -}
+ce95dd4fad2f974b84b3fad2a991a3cd
+  main9 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "%s %s\r\n"#) -}
+0630318bca9b01dc3af4b0f60f8dd33e
+  nick :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "tutbot"#) -}
+13072f50be592d9b89f6a05cf817ea8c
+  port :: GHC.Integer.Type.Integer
+  {- HasNoCafRefs, Unfolding: (__integer 6667) -}
+6238d5a3e6c321f649e2fab1a352b016
+  server :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "irc.freenode.org"#) -}
+84ac0c955b153b0d6181cc7ebaa09df6
+  write ::
+    GHC.IO.Handle.Types.Handle
+    -> GHC.Base.String -> GHC.Base.String -> GHC.Types.IO ()
+  {- Arity: 4, Strictness: <S,U><L,U><L,U><L,U>,
+     Unfolding: InlineRule (0, True, True)
+                Main.main7
+                  `cast`
+                (<GHC.IO.Handle.Types.Handle>_R
+                 ->_R <GHC.Base.String>_R
+                 ->_R <GHC.Base.String>_R
+                 ->_R Sym (GHC.Types.NTCo:IO[0] <()>_R)) -}
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: none
+require own pkg trusted: False
+
